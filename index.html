@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Coding by CodingFire - youtube.com/codingfire -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- link jquery.vnm.confettiButton.css -->
+    <link rel="stylesheet" href="jquery.vnm.confettiButton.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Confetti cursor mousemove effect | CodingFire</title>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <p class="text">Confetti</p>
+    <!-- include cdn and then the files we downloaded -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.vnm.confettiButton.js"></script>
+    <script>
+      $(function(){
+        $('.cursor').confettiButton();
+      });
+      // javascript
+      const cursor = document.querySelector('.cursor');
+      document.addEventListener('mousemove', (e) => {
+        // style left is 'X' value and we increase it by 1px every time we move our mouse
+        cursor.style.left = e.pageX + 'px';
+        // style left is 'Y' value and we increase it by 1px every time we move our mouse
+        cursor.style.top = e.pageY + 'px';
+      })
+    </script>
+  </body>
+</html>
